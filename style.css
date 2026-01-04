@@ -232,6 +232,7 @@ body {
   position: absolute;
   inset: 0; /* fills the image */
   /*outline: 2px dashed blue;*/
+  z-index: 5;
 }
 
 
@@ -244,20 +245,21 @@ body {
   cursor: pointer;
   z-index: 10;
 
-  display: flex;           /* center content */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .checkbox input {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);  /* center the circle */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;                         /* hide default circle, keep it clickable */
+  margin: 0;
+  padding: 0;
   cursor: pointer;
+  background: rgba(0, 255, 0, 0.4);
 }
 
 .checkbox.yes {
@@ -460,12 +462,10 @@ body {
 
   .checkbox.yes {
     top: 42%;   /* adjust until the box aligns with the art */
-    left: 35%;    /* try 36–40 until it visually aligns */
   }
 
   .checkbox.no {
     top: 42%;
-    left: 57%;
   }
     
 

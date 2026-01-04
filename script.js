@@ -4,7 +4,7 @@ const main  = document.getElementById("mainContent");
 
 function attachIntroListener(videoId) {
   const video = document.getElementById(videoId);
-  if (!video) return;
+  if (!video) return; // if that video doesn't exist, skip
 
   video.addEventListener("ended", () => {
     // flash
@@ -18,6 +18,6 @@ function attachIntroListener(videoId) {
   });
 }
 
-// Attach to both possible videos
+// Attach the listener to both possible videos
 attachIntroListener("introVideoDesktop");
 attachIntroListener("introVideoMobile");

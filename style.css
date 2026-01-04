@@ -33,21 +33,24 @@ body {
 }
 
 
-#intro video {
+.video-desktop,
+.video-mobile {
   position: absolute;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   min-width: 100%;
   min-height: 100%;
-
   width: auto;
   height: auto;
-
   object-fit: cover;
 }
+
+
+/* Default: show desktop video, hide mobile video */
+.video-desktop { display: block; }
+.video-mobile  { display: none; }
+
 
 #flash {
   position: absolute;
@@ -300,6 +303,10 @@ body {
 
 /* Mobile adaptation */
 @media (max-width: 768px) {
+
+  /* Use mobile video on small screens */
+  .video-desktop { display: none; }
+  .video-mobile  { display: block; }
 
   /* Reset main layout */
   #mainContent {

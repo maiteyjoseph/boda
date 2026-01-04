@@ -19,19 +19,25 @@
     muted
     playsinline
     preload="auto"
+    class="video-desktop"
   >
-    <!-- Mobile video FIRST -->
-    <source
-      src="assets/envelope-opening_phone.mp4"
-      media="(max-width: 768px)"
-      type="video/mp4"
-    >
-
     <!-- Desktop video fallback -->
     <source
       src="assets/envelope-opening.mp4"
       type="video/mp4"
     >
+  </video>
+
+    <!-- Mobile video -->
+  <video
+    id="introVideoMobile"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    class="video-mobile"
+  >
+    <source src="assets/envelope-opening_phone.mp4" type="video/mp4">
   </video>
 
   <div id="flash"></div>

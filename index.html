@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Save the Date | Joseph & Mai</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- INTRO VIDEO -->
+  <div id="intro">
+  <video
+    id="introVideo"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+  >
+    <!-- Mobile video FIRST -->
+    <source
+      src="assets/envelope-opening_phone.mp4"
+      media="(max-width: 768px)"
+      type="video/mp4"
+    >
+
+    <!-- Desktop video fallback -->
+    <source
+      src="assets/envelope-opening.mp4"
+      type="video/mp4"
+    >
+  </video>
+
+  <div id="flash"></div>
+</div>
+
+  <div id="mainContent" class="hidden">
+    <div class="card-wrapper">
+
+      <main class="layout">
+        <!-- Decorative stripe -->
+        <div class="inner-stripe">
+          <span class="vertical-text">SAVE <em>the</em> DATE</span>
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+
+          <div class="photo-column">
+            <img src="assets/photo1.jpg" alt="Joseph and Mai">
+            <img src="assets/photo2.jpg" alt="Joseph and Mai">
+            <img src="assets/photo3.jpg" alt="Joseph and Mai">
+          </div>
+
+          <div class="text-block">
+            <h1>Maite & Joseph</h1>
+            <p class="date">Abril 18, 2026</p>
+            <p class="location">Quito, Ecuador</p>
+            <p class="note">Más información muy pronto!</p>
+          </div>
+
+        </section>
+      </main>
+
+      <!-- Envelope (decorative, outside card) -->
+
+      <img src="assets/envelope2.png" alt="Envelope" class="envelope">
+      
+
+      <div class="reply-card">
+
+        <img src="assets/reply-card.png" alt="Reply Card">
+
+        <form class="reply-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnaJiKeTx0etZIDdYv7ZSRSZWpXaZUeWzo4Hgn-O0CDZYRjw/formResponse" method="POST" target="_blank">
+
+          <!-- Yes / No -->
+          <label class="checkbox yes">
+            <input type="radio" name="entry.877086558" value="YES">
+          </label>
+
+          <label class="checkbox no">
+            <input type="radio" name="entry.877086558" value="NO">
+          </label>
+
+          <!-- Names -->
+          <input
+            type="text"
+            name="entry.1498135098"
+            class="name-input"
+            placeholder="Tu nombre"
+            required
+          >
+
+          <button type="submit" class="submit-btn">Enviar</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -125,7 +125,7 @@ body {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -154,7 +154,7 @@ body {
 
 .content h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1.2rem;
   line-height: 2;   /* tighter for names */
 }
@@ -359,7 +359,7 @@ body {
   .content {
     display: grid;
 
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 75px 1fr;
     grid-template-rows: auto auto;
 
     grid-template-areas:
@@ -382,7 +382,7 @@ body {
 
   .vertical-text {
     writing-mode: vertical-rl;
-    font-size: 2rem;
+    font-size: 1.7rem;
     letter-spacing: 0.25em;;
   }
 
@@ -425,7 +425,7 @@ body {
   }
 
   .note {
-    font-size: 0.5rem;
+    font-size: 1rem;
     color: #888;
   }
 
@@ -450,11 +450,11 @@ body {
   }
 
   .checkbox.yes {
-    top: 38%;    /* try 36–40 until it visually aligns */
+    top: 42%;    /* try 36–40 until it visually aligns */
   }
 
   .checkbox.no {
-    top: 38%;    /* same top as yes */
+    top: 42%;    /* same top as yes */
   }
     
 

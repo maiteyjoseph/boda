@@ -382,7 +382,7 @@ body {
   .content {
     display: grid;
 
-    grid-template-columns: 75px 1fr;
+    grid-template-columns: 60px 1fr;
     grid-template-rows: auto auto;
 
     grid-template-areas:

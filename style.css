@@ -449,6 +449,15 @@ body {
     background: rgba(247, 185, 152, 0.66)/* light red */
   }
 
+  .checkbox.yes {
+    top: 38%;    /* try 36–40 until it visually aligns */
+  }
+
+  .checkbox.no {
+    top: 38%;    /* same top as yes */
+  }
+    
+
     .name-input {
     width: 23%;
     height: 14px;

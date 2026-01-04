@@ -421,7 +421,8 @@ body {
   .photo-column img {
     width: 100%;
     max-width: none;
-    height: 100px;
+    height: 110px;
+
   }
 
   .text-block {

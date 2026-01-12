@@ -1,0 +1,546 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4efe9;
+}
+
+#intro {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100svh; /* 🔑 mobile-safe viewport height */
+
+  background: black;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro {
+  height: 100vh;
+  height: 100svh;
+}
+
+
+.video-desktop,
+.video-mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* Default: show desktop video, hide mobile video */
+.video-desktop { display: block; }
+.video-mobile  { display: none; }
+
+
+#flash {
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+
+.hidden {
+  display: none;
+}
+
+#mainContent {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4efe9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* ← stop centering */
+  padding-left: 20vw;            /* ← gentle left offset */
+}
+
+/* Layout */
+.layout {
+  position: relative;       
+  
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  max-width: 760px;
+  width: 90%;
+  min-height: 700px;
+  display: flex;
+}
+
+/* Vertical strip */
+
+.inner-stripe {
+  position: absolute;
+  top: 30px;
+  right: 15%;
+  /*height: 100%;*/
+  width: 80px;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.vertical-text em {
+  font-style: italic;
+  text-transform: lowercase;
+  letter-spacing: normal;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  padding: 4rem 3rem 4rem 6rem; 
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;   /* ↓ bottom */
+  align-items: flex-end;       /* → right */
+
+  text-align: right;
+  gap: 3rem;
+}
+
+
+.content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  line-height: 2;   /* tighter for names */
+}
+
+.date {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.photo-column img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-wrapper {
+  position: relative; /* anchor for envelope */
+}
+
+.envelope {
+  position: absolute;
+
+  right: -450px;     /* move to the right of the card */
+  bottom: 0px;    /* push it under the card */
+
+  width: 260px;      /* adjust to taste */
+  z-index: -1;       /* ← makes it sit UNDER the white box */
+  transform: scale(2.3);
+  transform-origin: bottom right; /* 🔑 THIS FIXES IT */
+}
+
+
+.reply-card {
+  position: absolute;
+
+  right: -700px;
+  bottom: 0px;
+
+  width: 450px;
+
+  z-index: 2; /* above envelope, below main card if desired */
+
+  /*outline: 2px dashed red;*/
+}
+
+.reply-card img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.reply-form {
+  position: absolute;
+  inset: 0; /* fills the image */
+  /*outline: 2px dashed blue;*/
+  z-index: 5;
+}
+
+
+.checkbox {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #BB7E5E;
+  background: rgba(247, 185, 152, 0.66);
+  cursor: pointer;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(0, 255, 0, 0.4);
+}
+
+.checkbox.yes {
+  top: 42%;
+  left: 35%;
+}
+
+.checkbox.no {
+  top: 42%;
+  left: 57%;
+}
+
+
+.name-input {
+  position: absolute;
+
+  bottom: 45%;
+  left: 40%;
+  width: 25%;
+  height: 20px;
+  
+
+  border: 2px ;
+  background: rgba(247, 185, 152, 0.66); /* light blue */
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+
+  outline: none;
+  padding: 4px 6px;
+}
+
+
+.phone-input {
+  position: absolute;
+  bottom: 39%;
+  left: 40%;
+  width: 25%;
+  height: 20px;
+  
+
+  border: 2px ;
+  background: rgba(247, 185, 152, 0.66); /* light blue */
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+
+  outline: none;
+  padding: 4px 6px;
+}
+
+.submit-btn {
+  position: absolute;
+
+  bottom: 23%;
+  left: 40%;
+
+  background: rgba(247, 185, 152, 0.66); /* soft orange */
+  border: 2px solid #BB7E5E;
+  border-radius: 4px;
+
+  font-size: 0.75rem;
+  padding: 6px 10px;
+
+  cursor: pointer;
+}
+
+.mobile-divider {
+  display: none;
+}
+
+/* Mobile adaptation */
+@media (max-width: 768px) {
+
+  /* Use mobile video on small screens */
+  .video-desktop { display: none; }
+  .video-mobile  { display: block; }
+
+  /* Reset main layout */
+  #mainContent {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  #intro {
+    background: #f4efe9;      /* same color as page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #intro video {
+    position: static;         /* let flexbox center it */
+    transform: none;
+
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: cover;        /* fill area */
+    background: #f4efe9;
+  }
+
+  body {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+
+  .card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .envelope {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+
+    width: 80%;
+    max-width: 320px;
+
+    transform: scale(1);
+    margin-top: 15%;
+    
+    z-index: 0;
+  }
+
+  .layout {
+    max-width: 70%;
+    min-height: auto;
+    margin-top: 70%;
+    z-index: 1;
+  }
+
+  .content {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+      "stripe photos"
+      "info   info";
+
+    gap: 1.5rem;
+
+    padding: 5% 5% 5% 5%;
+    align-items: start;
+  }
+
+  .inner-stripe {
+    background: #fff;  /* keep the white stripe visible */
+    display: flex;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    font-size: 1.7rem;
+    letter-spacing: 0.25em;;
+  }
+
+  .photo-column {
+    grid-area: photos;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .photo-column img {
+    width: 100%;
+    max-width: none;
+    height: 113px;
+
+  }
+
+  .text-block {
+    grid-area: info;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.3;   /* tighter for names */
+  }
+
+  .date {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .location {
+    font-size: 0.6rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  .note {
+    font-size: 1rem;
+    color: #888;
+  }
+
+  .reply-card {
+    position: relative;
+    left: 3.5%;
+    bottom: auto;
+
+    width: 100%;
+    max-width: 320px;
+
+    margin-top: -40px; /* attached to white box */
+    z-index: 2;
+  }
+
+    .checkbox {
+    width: 12px;
+    height: 12px;
+  }
+
+  .checkbox.yes {
+    top: 42%;   /* adjust until the box aligns with the art */
+  }
+
+  .checkbox.no {
+    top: 42%;
+  }
+    
+
+    .name-input {
+    width: 23%;
+    height: 14px;
+    font-size: 0.6rem;
+
+  }
+  
+  .phone-input {
+    width: 23%;
+    height: 14px;
+    font-size: 0.6rem;
+  }
+
+  
+  .reply-form {
+    position: absolute;
+    inset: 0;
+  }
+
+
+    .submit-btn {
+    position: absolute;
+
+    bottom: 10%;
+    left: 40%;
+
+    background: rgba(247, 185, 152, 0.66); /* soft orange */
+    border: 2px solid #BB7E5E;
+    border-radius: 4px;
+
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    font-size: 0.5rem;
+
+  }
+
+  .mobile-divider {
+    display: block;
+    width: 20%;
+    max-width: 320px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+}
+

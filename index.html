@@ -2,125 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Nuestra Boda</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuestra Boda | Mai & Joseph</title>
+  <style>
+    /* Make the page fill the screen and center content */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #faf7f2; /* soft background color */
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    .container {
+      text-align: center;
+      padding: 1.5rem;
+    }
 
-  <link rel="stylesheet" href="style.css" />
+    .message-image {
+      max-width: 90vw;
+      max-height: 80vh;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .caption {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-  <!-- INTRO VIDEO -->
-  <div id="intro">
-  <video
-    id="introVideoDesktop"
-    class="video-desktop"
-    autoplay
-    muted
-    playsinline
-    preload="auto"
-  >
-    <source src="assets/envelope-opening.mp4" type="video/mp4">
-  </video>
-
-    <!-- Mobile video -->
-  <video
-    id="introVideoMobile"
-    autoplay
-    muted
-    playsinline
-    preload="auto"
-    class="video-mobile"
-  >
-    <source src="assets/envelope-opening_phone.mp4" type="video/mp4">
-  </video>
-
-  <div id="flash"></div>
-</div>
-
-  <div id="mainContent" class="hidden">
-    <div class="card-wrapper">
-
-      <main class="layout">
-        <!-- Decorative stripe -->
-        <div class="inner-stripe">
-          <span class="vertical-text">MAITE <em>&</em> JOSEPH</span>
-        </div>
-
-        <!-- Main content -->
-        <section class="content">
-
-          <div class="photo-column">
-            <img src="assets/photo6.jpg" alt="Joseph and Mai">
-            <img src="assets/photo2.jpg" alt="Joseph and Mai">
-            <img src="assets/photo3.jpg" alt="Joseph and Mai">
-          </div>
-
-          <div class="text-block">
-            <h1>¿Nos acompañas en este día?</h1>
-            <p class="date">Abril 18, 2026</p>
-            <p class="location">Quito, Ecuador</p>
-            <p class="note">¡Confirma tu asistencia y coloca tu nombre!</p>
-          </div>
-
-        </section>
-      </main>
-
-      <!-- NEW mobile-only image between white box and reply card -->
-      <img
-        src="assets/mobile-between.png"
-        alt="Decoración"
-        class="mobile-divider"
-      >
-
-      <!-- Envelope (decorative, outside card) -->
-
-      <img src="assets/envelope2.png" alt="Envelope" class="envelope">
-      
-
-      <div class="reply-card">
-
-        <img src="assets/reply-card2.png" alt="Reply Card">
-
-        <form class="reply-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnaJiKeTx0etZIDdYv7ZSRSZWpXaZUeWzo4Hgn-O0CDZYRjw/formResponse" method="POST" target="_blank">
-
-          <!-- Yes / No -->
-          <label class="checkbox yes">
-            <input type="radio" name="entry.877086558" value="YES">
-          </label>
-
-          <label class="checkbox no">
-            <input type="radio" name="entry.877086558" value="NO">
-          </label>
-
-          <!-- Names -->
-          <input
-            type="text"
-            name="entry.1498135098"
-            class="name-input"
-            placeholder="Tu nombre"
-            required
-          >
-
-          <!-- Phone -->
-          <input
-            type="tel"
-            name="entry.1411104922"  
-            class="phone-input"
-            placeholder="Tu teléfono"
-            required
-          >
-
-          <button type="submit" class="submit-btn">Enviar</button>
-
-        </form>
-
-      </div>
-    </div>
+  <div class="container">
+    <!-- Put your image file (e.g. message.jpg) in the same folder as index.html -->
+    <img src="assets/Closed_save_date.jpeg" alt="Message from the bride and groom" class="message-image" />
+    <!-- Optional text under the picture -->
+    <p class="caption"></p>
   </div>
-
-<script src="script.js"></script>
-
 </body>
 </html>

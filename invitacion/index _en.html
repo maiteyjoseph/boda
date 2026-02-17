@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo2.png">
+    <title>Maite & Joseph Wedding</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="sparkleCanvas"></canvas>
+
+    <div id="envelope-wrapper">
+        <div class="envelope-container" onclick="openEnvelope()">
+            <img src="assets/closed_envelope.png" alt="Wedding Invitation" class="envelope-img">
+        </div>
+        <p class="tap-hint">¡Open the envelope!</p>
+        <h3 class="tap-hint guest-line" style="margin-left: 30px; text-align: center;"><strong>TO:</strong> <span id="guest-name"></span></h3>
+        <h3 class="tap-hint">This invitation is for <strong id="guest-count"></strong> guests.</h3>
+    </div>
+
+    <main id="main-content" class="hidden">
+        
+        <section class="reveal-section wedding-page hero-section">
+            <div class="watermark-container">
+                <img src="assets/V9_blackwhite.jpg" alt="Maite and Joseph" class="watermark-img">
+            </div>
+            <div class="content-box hero-text">
+                
+                <h1>MAITE & JOSEPH</h1>
+                <div class="date-box">
+                    <hr> <span>April 18 2026</span> <hr>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal-section wedding-page program-section">
+            <div class="content-box">
+                <h2 class="script-font">Our Day</h2>
+
+                <div class="program-img-container">
+                    <img src="assets/signature.png" alt="Wedding Icon" class="program-icon">
+                </div>
+                        <p> <strong>11:30 PM </strong>Religious Ceremony</p>
+                <p><strong>13:00 PM </strong> Welcome Toast</p>
+                <p><strong>14:30 PM </strong> Lunch</p>
+                <p><strong>16:00 PM </strong> Party</p>
+                <p><strong>22:00 PM </strong> Farewell</p>
+            </div>
+        </section>
+
+
+        <section class="reveal-section wedding-page">
+            <div class="content-box">
+                <h2 class="script-font">Dress Code</h2>
+                <p>Formal attire is required.</p>
+                <p>Please avoid the following colors:</p>
+                <div class="color-dots">
+                    <span style="background: #ffff;"></span>
+                    <span style="background: #688E74;"></span>
+                    <span style="background: #9E3A26;"></span>
+                    <span style="background: #000042;"></span>
+                    <span style="background: #ffd5c2;"></span>
+                </div>
+
+                <div class="attire-gallery">
+                    <div class="attire-item">
+                        <img src="assets/dress_code.png" alt="Formal Dress Example" class="attire-img">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="reveal-section wedding-page">
+            <div class="content-box venue-layout">
+                <div class="venue-text">
+                    <h2 class="script-font">Ceremony and Reception</h2>
+                    <p><strong>Casa de Retiro San Francisco de Sales</strong></p>
+                    <p>The Church Ceremony will begin <strong>promptly at 11:30 am</strong> .</p>
+                    <p>At the end, we will continue the celebration in the same place, where we will share a special afternoon together.</p>
+                    
+                    <div class="location-container">
+                        <a href="https://maps.app.goo.gl/Pzi6jdgbTxBAXGPC9" target="_blank" class="location-link">
+                            <span class="location-icon">📍</span> View location.
+                        </a>
+                    </div>
+                </div>
+                <div class="venue-gallery">
+                    <img src="assets/casa_retiro2.webp" alt="Church Interior" class="venue-img-small">
+                    <img src="assets/casa_retiro.webp" alt="Church Exterior" class="venue-img-small">
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal-section wedding-page gift-section">
+            <div class="content-box">
+                <h2 class="script-font">Gifts</h2>
+                <h3 class="emma-thanks"><strong>Emma appreciates your thoughtful gesture.</strong></h3>
+                <p class="info-text">Here you will find the relevant information:</p>
+                
+                <div class="gift-container">
+                    <div class="bank-details">
+                        <h2 class="bank-title">Cuenta de Ahorros</h2>
+                        <p class="bank-info">Banco Pichincha</p>
+                        <p class="bank-info"><strong>2200053885</strong></p>
+                        <p class="bank-info">Joseph Leines</p>
+                        <p class="bank-info">CI:1721543088</p>
+                        
+                    </div>
+
+                    <div class="emma-picture">
+                        <div class="emma-item">
+                            <img src="assets/Vertical/emma-transparente.png" alt="Emma" class="emma-img rotated">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal-section wedding-page">
+            <div class="content-box">
+                <h2 class="script-font">¡We look forward to see you there!</h2>
+                <p> If you have any questions, don't hesitate to text us!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

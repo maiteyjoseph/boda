@@ -427,7 +427,7 @@ p {
 
     .watermark-container {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the image perfectly */
     width: 100%;
@@ -444,7 +444,7 @@ p {
     }
 
     .hero-text {
-    margin-top: 450px;  
+    margin-top: 350px;  
     }
 
 

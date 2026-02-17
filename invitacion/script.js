@@ -1,3 +1,21 @@
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // 1. Handle the Guest Name
+    let name = urlParams.get('invitado');
+    const nameElement = document.getElementById('guest-name');
+    if (name) {
+        nameElement.innerText = name.replace(/_/g, ' ');
+    }
+
+    // 2. Handle the Number of People
+    let pases = urlParams.get('pases');
+    const countElement = document.getElementById('guest-count');
+    if (pases) {
+        countElement.innerText = pases;
+    }
+};
+
 // 1. Envelope Opening Logic
 function openEnvelope() {
     // Trigger the sparkle effect
@@ -92,20 +110,3 @@ track.addEventListener('touchstart', () => clearInterval(scrollInterval));
 track.addEventListener('mousedown', () => clearInterval(scrollInterval));
 
 
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // 1. Handle the Guest Name
-    let name = urlParams.get('invitado');
-    const nameElement = document.getElementById('guest-name');
-    if (name) {
-        nameElement.innerText = name.replace(/_/g, ' ');
-    }
-
-    // 2. Handle the Number of People
-    let pases = urlParams.get('pases');
-    const countElement = document.getElementById('guest-count');
-    if (pases) {
-        countElement.innerText = pases;
-    }
-};

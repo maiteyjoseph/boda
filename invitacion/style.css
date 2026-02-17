@@ -101,12 +101,6 @@ body {
     word-wrap: break-word; /* Prevents long names from breaking the layout */
 }
 
-/* Specific styling for the guest name to make it pop */
-#guest-name {
-    display: inline-block;
-    margin-top: 5px;
-    color: #688E74;      /* Using your deep sage theme color */
-}
 
 @keyframes fadePulse {
     0%, 100% { opacity: 0.4; }

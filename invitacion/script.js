@@ -1,17 +1,25 @@
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     
-    // 1. Handle the Guest Name
+    // 1. Handle Guest Name
     let name = urlParams.get('invitado');
     const nameElement = document.getElementById('guest-name');
-    if (name) {
-        nameElement.innerText = name.replace(/_/g, ' ');
+    
+    if (name && nameElement) {
+        // First, replace underscores with spaces
+        let cleanName = name.replace(/_/g, ' '); 
+        
+        // Safety: If "y" is stuck between names (e.g. "LeinesyOlga"), 
+        // this adds a space before and after the "y"
+        cleanName = cleanName.replace(/(\S)y(\S)/g, '$1 y $2');
+        
+        nameElement.innerText = cleanName; 
     }
 
-    // 2. Handle the Number of People
+    // 2. Handle Pases
     let pases = urlParams.get('pases');
     const countElement = document.getElementById('guest-count');
-    if (pases) {
+    if (pases && countElement) {
         countElement.innerText = pases;
     }
 };

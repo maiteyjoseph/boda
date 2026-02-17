@@ -94,7 +94,6 @@ body {
 }
 
 .guest-line {
-    display: block;
     width: 90%;          /* Prevents text from touching the screen edges */
     margin: 15px auto;   /* Centers the block and adds vertical space */
     text-align: center;  /* Ensures multiple lines of text stay centered */

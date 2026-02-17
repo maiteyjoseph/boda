@@ -93,15 +93,6 @@ body {
     animation: fadePulse 2s infinite;
 }
 
-.guest-line {
-    width: 90%;          /* Prevents text from touching the screen edges */
-    margin: 15px auto;   /* Centers the block and adds vertical space */
-    text-align: center;  /* Ensures multiple lines of text stay centered */
-    line-height: 1.4;    /* Adds space between lines if the name wraps */
-    word-wrap: break-word; /* Prevents long names from breaking the layout */
-}
-
-
 @keyframes fadePulse {
     0%, 100% { opacity: 0.4; }
     50% { opacity: 1; }

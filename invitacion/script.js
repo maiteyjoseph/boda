@@ -22,7 +22,7 @@ window.onload = function() {
     if (pases && countElement) {
         countElement.innerText = pases;
     }
-};
+}
 
 // 1. Envelope Opening Logic
 function openEnvelope() {

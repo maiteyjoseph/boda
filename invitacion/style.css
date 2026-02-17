@@ -91,9 +91,23 @@ body {
     text-transform: uppercase;
     font-size: 1rem;
     animation: fadePulse 2s infinite;
-    position: center;
 }
 
+.guest-line {
+    display: block;
+    width: 90%;          /* Prevents text from touching the screen edges */
+    margin: 15px auto;   /* Centers the block and adds vertical space */
+    text-align: center;  /* Ensures multiple lines of text stay centered */
+    line-height: 1.4;    /* Adds space between lines if the name wraps */
+    word-wrap: break-word; /* Prevents long names from breaking the layout */
+}
+
+/* Specific styling for the guest name to make it pop */
+#guest-name {
+    display: inline-block;
+    margin-top: 5px;
+    color: #688E74;      /* Using your deep sage theme color */
+}
 
 @keyframes fadePulse {
     0%, 100% { opacity: 0.4; }

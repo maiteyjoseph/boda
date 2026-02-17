@@ -94,11 +94,6 @@ body {
 }
 
 
-.guest-line {
-    margin-left: 50px;
-    text-align: center;
-}
-
 
 @keyframes fadePulse {
     0%, 100% { opacity: 0.4; }

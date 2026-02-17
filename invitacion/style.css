@@ -93,6 +93,8 @@ body {
     animation: fadePulse 2s infinite;
 }
 
+
+
 @keyframes fadePulse {
     0%, 100% { opacity: 0.4; }
     50% { opacity: 1; }

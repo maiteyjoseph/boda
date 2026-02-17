@@ -427,7 +427,7 @@ p {
 
     .watermark-container {
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the image perfectly */
     width: 100%;
@@ -438,7 +438,7 @@ p {
 
     .watermark-img {
     width: 100%;
-    height: 100hv;
+    height: auto;
     opacity: 0.2; /* This creates the "faded" watermark look. Adjust between 0.1 and 0.3 */
     filter: grayscale(20%) sepia(10%); /* Optional: blends it better with the sage theme */
     }

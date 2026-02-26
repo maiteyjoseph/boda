@@ -6,19 +6,14 @@ window.onload = function() {
     const nameElement = document.getElementById('guest-name');
     
     if (name && nameElement) {
-    // 1. First, replace underscores with spaces
-    let cleanName = name.replace(/_/g, ' '); 
-
-    // 2. Fix "and" - This adds a space if it's missing on either side
-    // It looks for "and" and ensures it becomes " and "
-    cleanName = cleanName.replace(/([a-z])and([a-z])/gi, '$1 and $2') // squashed: MiaoandTina
-                          .replace(/([a-z])and\s/gi, '$1 and ')     // left squashed: Miaoand Tina
-                          .replace(/\sand([a-z])/gi, ' and $2');    // right squashed: Miao andTina
-
-    // 3. Fix "y" (Keeping your Spanish logic active too)
-    cleanName = cleanName.replace(/([a-z])y([a-z])/gi, '$1 y $2');
-
-    nameElement.innerText = cleanName; 
+        // First, replace underscores with spaces
+        let cleanName = name.replace(/_/g, ' '); 
+        
+        // Safety: If "y" is stuck between names (e.g. "LeinesyOlga"), 
+        // this adds a space before and after the "y"
+        cleanName = cleanName.replace(/(\S)y(\S)/g, '$1 y $2');
+        
+        nameElement.innerText = cleanName; 
     }
 
     // 2. Handle Pases

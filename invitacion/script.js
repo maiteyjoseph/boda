@@ -11,7 +11,7 @@ window.onload = function() {
         
         // Safety: If "y" is stuck between names (e.g. "LeinesyOlga"), 
         // this adds a space before and after the "y"
-        cleanName = cleanName.replace(/(\S)and(\S)/g, '$1 and $2');
+        cleanName = cleanName.replace(/(\S)y(\S)/g, '$1 and $2');
         
         nameElement.innerText = cleanName; 
     }

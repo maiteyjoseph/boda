@@ -6,19 +6,20 @@ window.onload = function() {
     const nameElement = document.getElementById('guest-name');
     
     if (name && nameElement) {
-    // 1. First, replace underscores with spaces
+    // 1. Replace underscores with spaces first
+    // This turns "Jijun_MiaoandTina_Zhou" into "Jijun MiaoandTina Zhou"
     let cleanName = name.replace(/_/g, ' '); 
 
-    // 2. Fix "and" - This adds a space if it's missing on either side
-    // It looks for "and" and ensures it becomes " and "
-    cleanName = cleanName.replace(/([a-z])and([a-z])/gi, '$1 and $2') // squashed: MiaoandTina
-                          .replace(/([a-z])and\s/gi, '$1 and ')     // left squashed: Miaoand Tina
-                          .replace(/\sand([a-z])/gi, ' and $2');    // right squashed: Miao andTina
+    // 2. Fix "and" (Case Insensitive)
+    // This finds "and" even if it's stuck between words and adds spaces
+    cleanName = cleanName.replace(/([a-zA-Z])and([a-zA-Z])/gi, '$1 and $2');
+    
+    // 3. Fix "y" (Case Insensitive)
+    // This handles the Spanish version in the same way
+    cleanName = cleanName.replace(/([a-zA-Z])y([a-zA-Z])/gi, '$1 y $2');
 
-    // 3. Fix "y" (Keeping your Spanish logic active too)
-    cleanName = cleanName.replace(/([a-z])y([a-z])/gi, '$1 y $2');
-
-    nameElement.innerText = cleanName; 
+    // 4. Final cleaning: remove any accidental double spaces
+    nameElement.innerText = cleanName.replace(/\s\s+/g, ' '); 
     }
 
     // 2. Handle Pases
